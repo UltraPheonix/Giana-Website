@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giana Praise | Church Singer</title>
+    <meta name="description" content="A Website for Giana Ribeiro" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <section class="intro-hero" id="home">
+        <div class="intro-hero__media">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1600&q=80"
+                alt="Portrait of Giana Ribeiro" />
+            <div class="intro-hero__overlay">
+                <h1>Giana Ribeiro</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="#home" aria-label="Giana Ribeiro">
+                <span></span>
+                <span></span>
+                <span>
+                    <strong>Giana Ribeiro</strong>
+                </span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <nav class="site-nav" id="primary-navigation">
+                <a href="#about">About</a>
+                <a href="#music">Music</a>
+                <a href="#book">Book me</a>
+            </nav>
+        </header>
+
+        <main id="site-content">
+            <section class="hero" id="overview">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Combining talent with truth</p>
+                    <h1>Leading hearts into worship with a voice full of grace.</h1>
+                    <p class="lead">
+                        A modern online home for Giana Praise, a church singer offering worship performances,
+                        Sunday service appearances, and special event bookings.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#contact">Book Giana</a>
+                        <a class="button button-secondary" href="#music">Listen & Watch</a>
+                    </div>
+                </div>
+
+                <div class="hero-card reveal">
+                    <div class="portrait-frame">
+                        <div class="portrait-overlay">
+                            <p>Sunday worship highlight</p>
+                            <h2>“Let every breath praise the Lord.”</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section about" id="about">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">About Giana</p>
+                    <h2>Warm worship, clear purpose, and a polished presence.</h2>
+                </div>
+                <div class="about-grid">
+                    <article class="info-card reveal">
+                        <h3>Who she is</h3>
+                        <p>
+                            Giana is a church singer focused on creating uplifting worship moments for services,
+                            revivals, conferences, and intimate praise gatherings.
+                        </p>
+                    </article>
+                    <article class="info-card reveal">
+                        <h3>What she offers</h3>
+                        <p>
+                            Live vocals, choir support, worship leading, special song performances, and custom
+                            church event appearances.
+                        </p>
+                    </article>
+                    <article class="info-card reveal">
+                        <h3>Why it matters</h3>
+                        <p>
+                            A strong church website should feel peaceful, trustworthy, and easy to use on any
+                            device. This design does that with bold typography and calm motion.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section music" id="music">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Demonstration </p>
+                </div>
+                <div class="media-layout">
+                    <article class="media-panel reveal">
+                        <h3>Ave Maria: Schubert</h3>
+                        <p></p>
+                        <button class="audio-button" type="button" data-track="Blessings overflow">Play sample praise
+                            track</button>
+                        <p class="track-note" aria-live="polite"></p>
+                    </article>
+                    <article class="media-panel reveal">
+                        <h3>Ministry highlights</h3>
+                        <ul class="check-list">
+                            <li>Sunday service worship sets</li>
+                            <li>Choir and guest appearances</li>
+                            <li>Wedding and celebration songs</li>
+                            <li>Prayer night and revival vocals</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section contact" id="book">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Book & Contact</p>
+                    <h2>Let's make this happen.</h2>
+                </div>
+                <div class="contact-grid">
+                    <form class="contact-form reveal">
+                        <label>
+                            Your name
+                            <input type="text" name="name" placeholder="Enter your name" required />
+                        </label>
+                        <label>
+                            Email address
+                            <input type="email" name="email" placeholder="name@example.com" required />
+                        </label>
+                        <label>
+                            Event details
+                            <textarea name="message" rows="5" required></textarea>
+                        </label>
+                        <button class="button button-primary" type="submit">Send Booking Request</button>
+                        <p class="form-status" aria-live="polite"></p>
+                    </form>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© <span id="year"></span> Giana Praise. All rights reserved.</p>
+            <a href="#home">Back to top</a>
+        </footer>
+    </div>
+</body>
+
+</html>
