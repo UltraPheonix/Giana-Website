@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-This is a website for Giana's singing 
-=======
 # Giana Ribeiro — Vocalist Website
 
 A one-page portfolio and booking site for Giana Ribeiro, a Boston-area vocalist
@@ -41,4 +38,3 @@ JavaScript — no build step or dependencies.
 
 It's a static site, so it can be hosted anywhere (GitHub Pages, Netlify, etc.).
 Upload the folder as-is; `index.html` is the entry point.
->>>>>>> 5f131f5 (Website)
