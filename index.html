@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giana Praise | Church Singer</title>
-    <meta name="description" content="A Website for Giana Ribeiro" />
+    <title>Giana Ribeiro | Vocalist</title>
+    <meta name="description"
+        content="Giana Ribeiro is a Boston-area vocalist specializing in jazz, classical, liturgical, and pop — available for events, services, and celebrations." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
 </head>
@@ -18,8 +22,7 @@
 <body>
     <section class="intro-hero" id="home">
         <div class="intro-hero__media">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1600&q=80"
-                alt="Portrait of Giana Ribeiro" />
+            <img src="Images/109_0219.jpg" alt="Portrait of Giana Ribeiro" />
             <div class="intro-hero__overlay">
                 <h1>Giana Ribeiro</h1>
             </div>
@@ -29,11 +32,7 @@
     <div class="page-shell">
         <header class="site-header">
             <a class="brand" href="#home" aria-label="Giana Ribeiro">
-                <span></span>
-                <span></span>
-                <span>
-                    <strong>Giana Ribeiro</strong>
-                </span>
+                <strong>Giana Ribeiro</strong>
             </a>
 
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
@@ -51,113 +50,129 @@
         </header>
 
         <main id="site-content">
-            <section class="hero" id="overview">
+            <section class="hero" id="about">
                 <div class="hero-copy reveal">
                     <p class="eyebrow">Combining talent with truth</p>
-                    <h1>Leading hearts into worship with a voice full of grace.</h1>
-                    <p class="lead">
-                        A modern online home for Giana Praise, a church singer offering worship performances,
-                        Sunday service appearances, and special event bookings.
+                    <p class="about-bio">
+                        Giana Ribeiro is a trained vocalist who has been performing at venues across the greater
+                        Boston area for 13 years. She specializes in jazz, classical, liturgical and pop genres.
+                        Whether providing the ambience for a cocktail hour or leading a congregation in worship,
+                        Giana creates a space where the beauty of music is tangible.
                     </p>
                     <div class="hero-actions">
-                        <a class="button button-primary" href="#contact">Book Giana</a>
-                        <a class="button button-secondary" href="#music">Listen & Watch</a>
+                        <a class="button button-primary" href="#book">Book Giana</a>
+                        <a class="button button-secondary" href="#music">Listen &amp; Watch</a>
                     </div>
                 </div>
 
                 <div class="hero-card reveal">
                     <div class="portrait-frame">
                         <div class="portrait-overlay">
-                            <p>Sunday worship highlight</p>
-                            <h2>“Let every breath praise the Lord.”</h2>
+                            <p>Live performance</p>
+                            <h2>&ldquo;Where the beauty of music is tangible.&rdquo;</h2>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section about" id="about">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">About Giana</p>
-                    <h2>Warm worship, clear purpose, and a polished presence.</h2>
-                </div>
-                <div class="about-grid">
-                    <article class="info-card reveal">
-                        <h3>Who she is</h3>
-                        <p>
-                            Giana is a church singer focused on creating uplifting worship moments for services,
-                            revivals, conferences, and intimate praise gatherings.
-                        </p>
-                    </article>
-                    <article class="info-card reveal">
-                        <h3>What she offers</h3>
-                        <p>
-                            Live vocals, choir support, worship leading, special song performances, and custom
-                            church event appearances.
-                        </p>
-                    </article>
-                    <article class="info-card reveal">
-                        <h3>Why it matters</h3>
-                        <p>
-                            A strong church website should feel peaceful, trustworthy, and easy to use on any
-                            device. This design does that with bold typography and calm motion.
-                        </p>
-                    </article>
-                </div>
-            </section>
-
             <section class="section music" id="music">
                 <div class="section-heading reveal">
-                    <p class="eyebrow">Demonstration </p>
+                    <p class="eyebrow">Demonstration</p>
+                    <h2>Hear her range.</h2>
                 </div>
-                <div class="media-layout">
-                    <article class="media-panel reveal">
-                        <h3>Ave Maria: Schubert</h3>
-                        <p></p>
-                        <button class="audio-button" type="button" data-track="Blessings overflow">Play sample praise
-                            track</button>
-                        <p class="track-note" aria-live="polite"></p>
-                    </article>
-                    <article class="media-panel reveal">
-                        <h3>Ministry highlights</h3>
-                        <ul class="check-list">
-                            <li>Sunday service worship sets</li>
-                            <li>Choir and guest appearances</li>
-                            <li>Wedding and celebration songs</li>
-                            <li>Prayer night and revival vocals</li>
-                        </ul>
-                    </article>
-                </div>
+
+                <article class="media-panel genre-featured reveal">
+                    <h3>Jazz</h3>
+                    <p>Smooth, soulful phrasing and improvisation drawn from the great American songbook and gospel jazz traditions.</p>
+
+                    <div class="video-grid">
+                        <figure class="video-card">
+                            <video controls preload="none" poster="videos/Jazz1.jpg">
+                                <source src="videos/Jazz1.mp4" type="video/mp4" />
+                                Your browser does not support embedded video.
+                            </video>
+                        </figure>
+                        <figure class="video-card">
+                            <video controls preload="none" poster="videos/Jazz2.jpg">
+                                <source src="videos/Jazz2.mp4" type="video/mp4" />
+                                Your browser does not support embedded video.
+                            </video>
+                        </figure>
+                        <figure class="video-card">
+                            <video controls preload="none" poster="videos/Jazz3.jpg">
+                                <source src="videos/Jazz3.mp4" type="video/mp4" />
+                                Your browser does not support embedded video.
+                            </video>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="media-panel genre-featured reveal">
+                    <h3>Contemporary</h3>
+                    <p>Modern worship and pop-inflected vocals for services, celebrations, and special-event performances.</p>
+
+                    <div class="video-grid">
+                        <figure class="video-card">
+                            <video controls preload="none" poster="videos/Contemp1.jpg">
+                                <source src="videos/Contemp1.mp4" type="video/mp4" />
+                                Your browser does not support embedded video.
+                            </video>
+                        </figure>
+                        <figure class="video-card">
+                            <video controls preload="none" poster="videos/Contemp2.jpg">
+                                <source src="videos/Contemp2.mp4" type="video/mp4" />
+                                Your browser does not support embedded video.
+                            </video>
+                        </figure>
+                    </div>
+                </article>
+
+                <article class="media-panel genre-featured reveal">
+                    <h3>Classical / Liturgical</h3>
+                    <p>Sacred and classical repertoire, from Ave Maria to hymns and liturgical settings for reverent worship.</p>
+
+                    <div class="video-grid">
+                        <figure class="video-card">
+                            <video controls preload="none" poster="videos/Liturgical1.jpg">
+                                <source src="videos/Liturgical1.mp4" type="video/mp4" />
+                                Your browser does not support embedded video.
+                            </video>
+                        </figure>
+                    </div>
+                </article>
             </section>
 
             <section class="section contact" id="book">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">Book & Contact</p>
-                    <h2>Let's make this happen.</h2>
-                </div>
                 <div class="contact-grid">
-                    <form class="contact-form reveal">
-                        <label>
-                            Your name
-                            <input type="text" name="name" placeholder="Enter your name" required />
-                        </label>
-                        <label>
-                            Email address
-                            <input type="email" name="email" placeholder="name@example.com" required />
-                        </label>
-                        <label>
-                            Event details
-                            <textarea name="message" rows="5" required></textarea>
-                        </label>
-                        <button class="button button-primary" type="submit">Send Booking Request</button>
-                        <p class="form-status" aria-live="polite"></p>
-                    </form>
+                    <div class="section-heading reveal">
+                        <p class="eyebrow">Book &amp; Contact</p>
+                        <h2>Let's make this happen.</h2>
+                    </div>
 
+                    <aside class="contact-panel reveal">
+                        <h3>Reach out directly</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:gribeir2@friars.providence.edu">gribeir2@friars.providence.edu</a>
+                            </li>
+                            <li>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+16179130676">+1 (617) 913-0676</a>
+                            </li>
+                        </ul>
+                        <div class="note-box">
+                            <strong>Booking Giana</strong>
+                            <span>Available for services, weddings, cocktail hours, and special events across the
+                                greater Boston area.</span>
+                        </div>
+                    </aside>
                 </div>
             </section>
         </main>
 
         <footer class="site-footer">
-            <p>© <span id="year"></span> Giana Praise. All rights reserved.</p>
+            <p>© <span id="year">2026</span> Giana Ribeiro. All rights reserved.</p>
             <a href="#home">Back to top</a>
         </footer>
     </div>

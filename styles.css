@@ -94,9 +94,9 @@ a {
 
 .intro-hero__media img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
-    object-position: center 18%;
+    object-position: center 40%;
 }
 
 .intro-hero__overlay {
@@ -163,25 +163,8 @@ main {
     gap: 14px;
 }
 
-.brand strong,
-.brand small {
+.brand strong {
     display: block;
-}
-
-.brand small {
-    color: var(--muted);
-}
-
-.brand-mark {
-    width: 52px;
-    height: 52px;
-    display: grid;
-    place-items: center;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #8f99fb, #c9ceff);
-    color: #fff;
-    font-weight: 800;
-    box-shadow: var(--shadow);
 }
 
 .site-nav {
@@ -204,7 +187,6 @@ main {
     transform: translateY(-1px);
 }
 
-.nav-cta,
 .button {
     display: inline-flex;
     align-items: center;
@@ -212,11 +194,6 @@ main {
     border-radius: 999px;
     padding: 14px 22px;
     transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
-}
-
-.nav-cta {
-    background: rgba(143, 153, 251, 0.08);
-    color: var(--text) !important;
 }
 
 .button-primary {
@@ -231,7 +208,6 @@ main {
     color: var(--text);
 }
 
-.nav-cta:hover,
 .button:hover {
     transform: translateY(-2px);
 }
@@ -264,12 +240,8 @@ main {
     padding: 42px 0 24px;
 }
 
-.hero-copy h1,
 .section-heading h2,
 .media-panel h3,
-.info-card h3,
-.timeline-item h3,
-.quote-card p,
 .contact-panel h3,
 .portrait-overlay h2 {
     font-family: "Cormorant Garamond", serif;
@@ -283,63 +255,27 @@ main {
     font-size: 0.78rem;
 }
 
-.hero-copy h1 {
-    font-size: clamp(3.2rem, 7vw, 6.8rem);
-    line-height: 0.94;
-    margin: 0.12em 0 0.2em;
-    max-width: 9ch;
-}
-
-.lead {
+.about-bio {
+    margin: 0;
+    max-width: 60ch;
     color: var(--muted);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.8;
-    max-width: 62ch;
 }
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin: 28px 0;
+    margin: 28px 0 0;
 }
 
-.hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.hero-stats li,
-.info-card,
 .media-panel,
-.quote-card,
-.contact-form,
-.contact-panel,
-.timeline-item {
+.contact-panel {
     border: 1px solid var(--card-border);
     background: var(--card);
     backdrop-filter: blur(16px);
     box-shadow: var(--shadow);
-}
-
-.hero-stats li {
-    padding: 18px;
-    border-radius: var(--radius-md);
-}
-
-.hero-stats strong {
-    display: block;
-    font-size: 1.7rem;
-    margin-bottom: 4px;
-}
-
-.hero-stats span {
-    color: var(--muted);
-    font-size: 0.94rem;
 }
 
 .hero-card {
@@ -352,13 +288,12 @@ main {
 
 .portrait-frame {
     position: relative;
-    min-height: 430px;
+    min-height: 520px;
     border-radius: 28px;
     overflow: hidden;
     background:
-        linear-gradient(180deg, rgba(29, 26, 23, 0.03), rgba(29, 26, 23, 0.26)),
-        radial-gradient(circle at top, rgba(248, 249, 255, 0.98), rgba(143, 153, 251, 0.18)),
-        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80") center/cover;
+        linear-gradient(180deg, rgba(10, 10, 20, 0) 45%, rgba(10, 10, 20, 0.45) 100%),
+        url("Images/Screenshot_20250604_211613_Gallery.jpg") 60% 22% / cover;
 }
 
 .portrait-overlay {
@@ -385,35 +320,10 @@ main {
     line-height: 0.95;
 }
 
-.mini-card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-    margin-top: 14px;
-}
-
-.mini-card-grid article {
-    padding: 16px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(143, 153, 251, 0.08);
-}
-
-.mini-card-grid span,
 .contact-panel p,
-.timeline-item p,
-.info-card p,
 .media-panel p,
-.quote-card footer,
-.site-footer p,
-.track-note,
-.form-status {
+.site-footer p {
     color: var(--muted);
-}
-
-.mini-card-grid strong {
-    display: block;
-    margin-top: 6px;
 }
 
 .section {
@@ -431,86 +341,58 @@ main {
     max-width: 11ch;
 }
 
-.about-grid,
-.media-layout,
-.testimonial-grid,
 .contact-grid {
     display: grid;
     gap: 18px;
 }
 
-.about-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.info-card,
 .media-panel,
-.quote-card,
-.contact-form,
-.contact-panel,
-.timeline-item {
+.contact-panel {
     border-radius: var(--radius-lg);
     padding: 24px;
 }
 
-.info-card h3,
 .media-panel h3,
-.contact-panel h3,
-.timeline-item h3 {
+.contact-panel h3 {
     font-size: 2rem;
     margin: 0 0 10px;
 }
 
-.media-layout {
-    grid-template-columns: 1fr 1fr;
+.genre-featured {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 18px;
 }
 
-.check-list {
-    margin: 18px 0 0;
-    padding-left: 20px;
-    color: var(--muted);
+.genre-featured h3,
+.genre-featured p {
+    margin: 0;
 }
 
-.audio-button {
-    border: 0;
-    border-radius: 999px;
-    padding: 14px 18px;
-    background: rgba(143, 153, 251, 0.08);
-    color: var(--text);
-    font-weight: 700;
-}
-
-.timeline {
-    display: grid;
-    gap: 16px;
-}
-
-.timeline-item {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    align-items: start;
-    gap: 18px;
-}
-
-.date {
-    display: inline-flex;
-    align-items: center;
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    min-height: 60px;
-    border-radius: 18px;
-    background: rgba(143, 153, 251, 0.08);
-    color: var(--accent);
-    font-weight: 800;
+    gap: 18px;
+    width: 100%;
+    margin-top: 8px;
 }
 
-.testimonial-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.video-card {
+    margin: 0;
+    flex: 1 1 300px;
+    max-width: 380px;
 }
 
-.quote-card p {
-    font-size: 2rem;
-    line-height: 1.15;
-    margin: 0 0 18px;
+.video-card video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    background: #000;
+    object-fit: cover;
+    box-shadow: 0 18px 40px rgba(28, 32, 74, 0.12);
 }
 
 .contact-grid {
@@ -518,36 +400,41 @@ main {
     align-items: start;
 }
 
-.contact-form {
+.contact-panel {
+    position: sticky;
+    top: 108px;
+}
+
+.contact-list {
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 0;
     display: grid;
     gap: 16px;
 }
 
-.contact-form label {
+.contact-list li {
     display: grid;
-    gap: 8px;
+    gap: 3px;
+}
+
+.contact-label {
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.contact-list a {
+    font-size: 1.05rem;
     font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    border: 1px solid rgba(143, 153, 251, 0.12);
-    border-radius: 16px;
-    padding: 14px 16px;
-    background: rgba(255, 255, 255, 0.96);
     color: var(--text);
+    word-break: break-word;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: 2px solid rgba(143, 153, 251, 0.32);
-    outline-offset: 2px;
-}
-
-.contact-panel {
-    position: sticky;
-    top: 108px;
+.contact-list a:hover {
+    color: var(--accent);
 }
 
 .note-box {
@@ -578,13 +465,16 @@ main {
     border: 0;
 }
 
-.reveal {
+/* Content is visible by default. The fade-in animation only applies when
+   JavaScript is running (html.js), so a browser that can't run the reveal
+   script still shows everything instead of a blank page. */
+.js .reveal {
     opacity: 0;
     transform: translateY(18px);
     transition: opacity 700ms ease, transform 700ms ease;
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -632,19 +522,12 @@ main {
     }
 
     .hero,
-    .about-grid,
-    .media-layout,
-    .testimonial-grid,
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
     .hero {
         padding-top: 20px;
-    }
-
-    .hero-copy h1 {
-        max-width: 100%;
     }
 
     .contact-panel {
@@ -686,28 +569,13 @@ main {
         gap: 14px;
     }
 
-    .hero-stats,
-    .mini-card-grid,
-    .timeline-item {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-stats li,
-    .info-card,
     .media-panel,
-    .quote-card,
-    .contact-form,
-    .contact-panel,
-    .timeline-item {
+    .contact-panel {
         padding: 20px;
     }
 
     .section {
         padding-top: 64px;
-    }
-
-    .quote-card p {
-        font-size: 1.7rem;
     }
 
     .site-footer {
