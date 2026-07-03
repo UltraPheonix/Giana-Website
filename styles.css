@@ -101,8 +101,7 @@ a {
 
 .intro-hero__overlay {
     position: absolute;
-    inset: 50% auto auto 50%;
-    transform: translate(-50%, -50%);
+    inset: auto auto 6vh 5vw;
     z-index: 1;
     padding: 0;
     border-radius: 0;
@@ -110,7 +109,7 @@ a {
     border: 0;
     backdrop-filter: none;
     box-shadow: none;
-    text-align: center;
+    text-align: left;
 }
 
 .intro-hero__overlay h1 {
@@ -146,15 +145,18 @@ main {
     justify-content: space-between;
     gap: 24px;
     padding: 16px 18px;
-    position: sticky;
+    position: fixed;
     top: 12px;
-    margin: 12px 0 8px;
+    left: 0;
+    right: 0;
+    width: min(calc(100% - 32px), var(--max));
+    margin: 0 auto;
     border: 1px solid rgba(143, 153, 251, 0.12);
     border-radius: 28px;
     backdrop-filter: blur(16px);
     background: rgba(255, 255, 255, 0.82);
     box-shadow: 0 10px 26px rgba(143, 153, 251, 0.08);
-    z-index: 20;
+    z-index: 50;
 }
 
 .brand {
@@ -238,6 +240,7 @@ main {
     gap: 32px;
     align-items: center;
     padding: 42px 0 24px;
+    scroll-margin-top: 96px;
 }
 
 .section-heading h2,
@@ -328,6 +331,7 @@ main {
 
 .section {
     padding: 82px 0 0;
+    scroll-margin-top: 96px;
 }
 
 .section-heading {
@@ -490,13 +494,14 @@ main {
     }
 
     .intro-hero__overlay {
-        width: min(88vw, 620px);
+        inset: auto auto 5vh 6vw;
+        max-width: 82vw;
     }
 
     .site-header {
         flex-wrap: wrap;
         top: 8px;
-        margin: 8px 0 6px;
+        margin: 0 auto;
         padding: 14px 16px;
     }
 
@@ -553,7 +558,8 @@ main {
     }
 
     .intro-hero__overlay {
-        width: calc(100% - 32px);
+        inset: auto auto 4vh 5vw;
+        max-width: 88vw;
     }
 
     .intro-hero__overlay h1 {
