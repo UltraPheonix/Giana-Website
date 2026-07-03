@@ -26,6 +26,8 @@ if (siteHeader && introHero) {
     const dock = Math.min(1, Math.max(0, 1 - progress));
     siteHeader.style.setProperty('--dock', dock.toFixed(3));
     siteHeader.classList.toggle('is-over-hero', dock < 0.5);
+    // Hide the photo gradient + bar panel while at the very top; show them on scroll.
+    document.documentElement.classList.toggle('is-scrolled', window.scrollY > 0);
   };
 
   let ticking = false;

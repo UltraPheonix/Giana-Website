@@ -87,6 +87,12 @@ a {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.4) 100%);
+    transition: opacity 140ms ease;
+}
+
+/* Gradient is hidden while the photo is fully in focus, then appears on scroll. */
+.js:not(.is-scrolled) .intro-hero__media::after {
+    opacity: 0;
 }
 
 .intro-hero__media img {
@@ -128,6 +134,16 @@ main {
     background: rgba(255, 255, 255, calc(0.06 + 0.76 * var(--dock)));
     backdrop-filter: blur(16px);
     box-shadow: 0 10px 26px rgba(143, 153, 251, calc(0.10 * var(--dock)));
+    transition: background 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+/* At the very top (photo fully in focus, JS running) the bar is just text —
+   no panel, no gradient. It snaps in the moment you scroll. */
+.js:not(.is-scrolled) .site-header {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
 }
 
 .brand {
@@ -149,7 +165,7 @@ main {
 .site-header.is-over-hero .brand strong,
 .site-header.is-over-hero .site-nav a {
     color: #fff;
-    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 2px 18px rgba(0, 0, 0, 0.45);
 }
 
 .site-nav {
