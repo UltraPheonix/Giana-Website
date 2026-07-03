@@ -1,24 +1,48 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const siteNav = document.querySelector('.site-nav');
 const yearElement = document.querySelector('#year');
 const revealElements = document.querySelectorAll('.reveal');
+const siteHeader = document.querySelector('.site-header');
+const introHero = document.querySelector('.intro-hero');
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = siteNav.classList.toggle('is-open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-  });
+// Nav bar starts near the bottom of the hero photo and travels up to dock at the
+// top as you scroll, morphing from a large translucent bar into a compact one.
+if (siteHeader && introHero) {
+  const DOCK_TOP = 12;
+  const GAP = 22;
 
-  siteNav.addEventListener('click', (event) => {
-    if (event.target.matches('a')) {
-      siteNav.classList.remove('is-open');
-      menuToggle.setAttribute('aria-expanded', 'false');
+  const updateHeader = () => {
+    const heroHeight = introHero.offsetHeight;
+    const headerHeight = siteHeader.offsetHeight;
+    const heroBottom = heroHeight - window.scrollY;
+    const startTop = heroHeight - headerHeight - GAP;
+    const targetTop = Math.max(DOCK_TOP, heroBottom - headerHeight - GAP);
+    siteHeader.style.top = targetTop + 'px';
+
+    const travel = startTop - DOCK_TOP;
+    const progress = travel > 0 ? (targetTop - DOCK_TOP) / travel : 0;
+    const dock = Math.min(1, Math.max(0, 1 - progress));
+    siteHeader.style.setProperty('--dock', dock.toFixed(3));
+    siteHeader.classList.toggle('is-over-hero', dock < 0.5);
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateHeader();
+        ticking = false;
+      });
+      ticking = true;
     }
-  });
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', updateHeader);
+  window.addEventListener('load', updateHeader);
+  updateHeader();
 }
 
 const revealAll = () => revealElements.forEach((element) => element.classList.add('is-visible'));
